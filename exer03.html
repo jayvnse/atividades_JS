@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(15, 104, 206);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TÍTULO 1</h1>
+    <script>
+
+      /*  
+        tipos de dados em JS
+        - number (números inteiros ou reais/flutuantes)
+        - String (conjunto de caracteres ou texto)
+        - boolean (binário ou seja 0/1 ou true/false verdadeiro/falso)
+
+
+        Dentro do number
+        - NaN (Not a Number)
+        - Infinity
+
+        outro tipos
+        - null
+        - undefined
+        - object
+            - array
+      */
+
+      var n1 = window.prompt('Insira um número qualquer:')
+      var n2 = window.prompt('Insira outro número qualquer:')
+      var soma = n1 + n2 // esse sinal + está funcionando como concatenação pq as variaveis n1 e n2 são do tipo String
+      window.alert(soma)
+
+    // Conversão de String para number
+        /*
+            Number.parseInt()
+            Number.parseFloat()
+
+            nas versões mais novas do JS
+            Number()
+        */
+
+      var n3 = Number(window.prompt('Insira um número qualquer:'))
+      var n4 = Number(window.prompt('Insira outro número qualquer:'))
+      var s = n3 + n4 // esse sinal + está funcionando como soma pq as variaveis n3 e n4 são do tipo Number
+      window.alert(s)
+
+    /* Converter para String
+
+    String(n) >>>>>>>  window.alert(String(s))
+    n.toString() >>>>  window.alert(s.toString())
+    */
+    </script>
+  </body>
+</html>
