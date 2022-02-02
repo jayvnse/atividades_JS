@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando DOM pela primeira vez</title>
+    <style>
+        body{
+            background-color: beige;
+            color: blueviolet;
+            font: normal 22pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Utilizando DOM para somar e subtrair</h1>
+    </div>
+    <div>
+        <h3>Calculadora - operação soma</h3>
+        <input type="number" name="input1" id="inp1"> +
+        <input type="number" name="input2" id="inp2">
+        <input type="button" value="Somar" onclick="somar()">
+        <div id="resultado">
+            Resultado
+        </div>
+    </div>
+
+    <script>
+        function somar() {
+            var n1 = window.document.getElementById('inp1')
+            var n2 = window.document.getElementById('inp2')
+            // var num1 = Number(n1.value)
+            // var num2 = Number(n2.value)
+            var soma = Number(n1.value) + Number(n2.value)
+            resultado.innerHTML = `O resultado da soma é ${soma}`
+        }
+    </script>
+
+</body>
+</html>

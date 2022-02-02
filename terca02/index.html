@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando DOM pela primeira vez</title>
+    <style>
+        body{
+            background-color: beige;
+            color: blueviolet;
+            font: normal 22pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Começando a estudar DOM</h1>
+    </div>
+    <div>
+        <h3>DOM - document object model</h3>
+        <p class="nomes" name="asdasd">Em tradução livre DOM é o modelo de <strong id='primeiro'>objetos</strong> num documento.</p>
+        <p>Aprendendo</p>
+    </div>
+
+    <script>
+
+        /* Posso selecionar por:
+            - ID
+            - Classe
+            - Nome
+            - Seletor
+            - Marca/Tag
+        */
+
+        //tag
+        var body = window.document.body
+        var texto = window.document.getElementsByTagName('p')[0]
+        //window.document.write(texto.innerText)
+        body.style.background = 'black'
+        texto.style.color = 'red'
+
+        //id
+        var texto2 = window.document.getElementById('primeiro')
+        texto2.style.color = 'white'
+    
+        //classe
+        var texto3 = window.document.getElementsByClassName('nomes')
+        texto3.style.color = 'blue'
+
+        //Nome
+        var texto4 = window.document.getElementsByName('asdasd')
+
+        //Seletor
+        document.querySelector('p')[0]
+
+    </script>
+
+</body>
+</html>

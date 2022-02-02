@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando DOM pela primeira vez</title>
+    <style>
+        body{
+            background-color: beige;
+            color: blueviolet;
+            font: normal 22pt Arial;
+        }
+        #bloco{
+            height: 300px;
+            width: 300px;
+            background-color: cadetblue;
+            line-height: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Utilizando DOM para somar e subtrair</h1>
+    </div>
+    <div>
+        <h3>Funções com DOM</h3>
+        <div id="bloco" onmouseenter="entrar()" onclick="clicar()" onmouseleave="sair()">
+            <p>ALGO</p>
+        </div>
+    </div>
+
+    <script>
+        var bl = window.document.getElementById('bloco')
+        
+        function clicar() {
+            bl.innerText = 'ALERTA!!!'
+            bl.style.background = 'red'
+            bl.style.color = 'white'
+
+        }
+
+        function entrar(){
+            bl.innerText = 'Você está dentro'
+            bl.style.background = '#2be268'
+        }
+
+        function sair(){
+            bl.innerText = 'Você saiu'
+            bl.style.background = '#3a1a35'
+        }
+    </script>
+
+</body>
+</html>
